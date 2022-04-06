@@ -1,0 +1,22 @@
+mixin article_card(data)
+  article.article_card
+    +picture({
+      img: data.image,
+      class: 'article_card__picture',
+      img_class: 'article_card__img',
+    })
+    .article_card__content 
+      h2.article_card__title
+        a.article_card__link(href=data.link)= data.title
+      .article_card__meta
+        .article_card__author= data.author
+        .article_card__date= data.date
+      ul.article_card__categories.category_link__list
+        each category in data.categories 
+          li.category_link__item
+            a.category_link(href=category.link)= category.name
+      .article_card__comments
+        a.comment_counter(href='#')
+          .comment_counter__value 0
+          .comment_counter__icon 
+            +icon('comment')

@@ -1,0 +1,21 @@
+.comment_counter {
+	display: inline-flex;
+	align-items: center;
+	color: #889099;
+	font-size: 1.4rem;
+	transition: color 0.3s linear;
+	&:hover {
+		color: $color_link_accent;
+	}
+}
+.comment_counter__value {
+	margin-right: 0.4rem;
+}
+.comment_counter__icon {
+	width: 1.3rem;
+	height: 1.3rem;
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}

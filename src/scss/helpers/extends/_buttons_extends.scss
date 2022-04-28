@@ -1,41 +1,69 @@
 @mixin st_btn() {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-	text-align: center;
-	white-space: nowrap;
+  text-align: center;
+  white-space: nowrap;
 
-	cursor: pointer;
+  cursor: pointer;
 
-	&:hover, &:focus {
-		text-decoration: none;
-	}
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 
 }
 
 //color extends
-%blue_btn_1 {
-	font-weight: 700;
-	color: $white;
-	background-color: $color_link_base;
-	transition: background-color .3s ease;
+%accent_btn {
+  color: $white;
+  background-color: $accent;
+  transition: background-color .3s ease;
 
-	@include st_btn();
+  @include st_btn();
 
-	&:hover {
-		background-color: darken($color_link_base, 10%);
-	}
+  &:hover {
+    background-color: darken($accent, 10%);
+  }
+
+}
+
+// bordered button
+%border_btn {
+  color: $white;
+  background-color: transparent;
+  border: 2px solid $white;
+  transition: border-color .3s ease, color .3s ease;
+
+  @include st_btn();
+
+  &:hover {
+    border-color: rgba($color: $white, $alpha: 0.6);
+    color: rgba($color: $white, $alpha: 0.6);
+  }
 
 }
 
 //size extends
 %btn_size_1 {
-	height: 4rem;
-	padding: 0 1.2rem;
+  height: 5.8rem;
+  padding: 0 3.4rem;
 
-	line-height: 4rem;
-	font-size: 1.6rem;
+  line-height: 5.8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 7rem;
+}
+%btn_size_2 {
+  height: 6.5rem;
+  min-width: 20rem;
+  padding: 0 4rem;
 
-	border-radius: $gl_radius;
+  line-height: 6.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 7rem;
 }

@@ -1,0 +1,30 @@
+.text_label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.8rem;
+  padding: 0 1.3rem;
+  border-radius: 6.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  span {
+    text-transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.text_label--bg_blue {
+  background-color: #7FB2FF;
+}
+.text_label--bg_green {
+  background-color: #58A85C;
+}

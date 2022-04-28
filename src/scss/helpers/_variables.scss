@@ -1,17 +1,19 @@
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'Roboto', sans-serif;
+$font_1: 'PT Sans', sans-serif;
+$font_heading: 'Bebas Neue Pro', sans-serif;
 $font_size_base: 1.6rem;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
-$black: #323642;
-
+$black: #000;
+$accent: #D84B45;
 $color_text_base: $black;
 $color_link_base:#4aa3df;
 $color_link_accent:#4CB649;
 $color_link_focus:#388336;
+
 $body_bg: $white;
 //---------------------------------------------colors###
 
@@ -24,7 +26,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 120rem;
+$page_width: 176rem;
 
 //---------------------------------------------layout###
 

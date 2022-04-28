@@ -1,98 +1,99 @@
-block vars
-  -
-    array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index'}
-    blogTags = [
-      {title: 'bitcoin', link:'#'},
-      {title: 'bittorrent', link:'#'},
-      {title: 'irc', link:'#'},
-      {title: 'news', link:'#'},
-      {title: 'privacy', link:'#'},
-      {title: 'programming', link:'#'},
-      {title: 'security', link:'#'}
+block project_vars
+  - 
+    tooltips = [
+      {id: 0, bottom: 40, left: 10, content: 'Едва открыв глаза, вдохнуть аромат леса', image: 'tooltip1'},
+      {id: 1, bottom: 25, left: 29, content: 'Едва открыв глаза, вдохнуть аромат леса', image: 'tooltip1'},
+      {id: 2, bottom: 61, left: 39, content: 'Едва открыв глаза, вдохнуть аромат леса', image: 'tooltip1'},
+      {id: 3, bottom: 52, left: 65, content: 'Едва открыв глаза, вдохнуть аромат леса', image: 'tooltip1'},
+      {id: 4, bottom: 54, left: 84, content: 'Едва открыв глаза, вдохнуть аромат леса', image: 'tooltip1'},
     ]
-
-    blogPosts = [
+    featureList = [
       {
-        title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises', 
-        link:'#', 
-        image: 'article1',
-        author: 'Derek Zimmer',
-        date: 'JUL 25, 2018',
-        categories: [{name: 'Governments', link: '#'}, {name: 'Networking', link: '#'}, {name: 'Open Source', link: '#'}, {name: 'Privacy', link: '#'}, {name: 'Security', link: '#'}] 
+        title: 'Экологично', 
+        text: 'Качественные строительные материалы бизнес –класса. Современные строительные технологии.', 
+        image: 'images/feature1.svg'
       },
       {
-        title: 'How to get cheaper flights using a VPN', 
-        link:'#', 
-        image: 'article2',
-        author: 'Jayson',
-        date: 'JUL 24, 2018',
-        categories: [{name: 'Guides', link: '#'}] 
+        title: 'Удобно', 
+        text: 'Ленинградское или Пятницкое шоссе, 19 км от МКАД. 1 км от г. Зеленоград с инфраструктурой столичного уровня.', 
+        image: 'images/feature2.svg'
       },
       {
-        title: 'Net Neutrality was repealed, but the fight is far from over', 
-        link:'#', 
-        image: 'article3',	
-        author: 'Chris Miller',
-        date: 'JUL 22, 2018',
-        categories: [{name: 'Governments', link: '#'}, {name: 'Net Neutrality', link: '#'}, {name: 'News', link: '#'}] 	
+        title: 'Современно', 
+        text: 'Единая архитектурная концепция. <br>Стиль BarnHouse: Минимализм. Лофт. Биотек.', 
+        image: 'images/feature3.svg'
       },
       {
-        title: 'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises', 
-        link:'#', 
-        image: 'article1',	
-        author: 'Derek Zimmer',
-        date: 'JUL 25, 2018',
-        categories: [{name: 'Governments', link: '#'}, {name: 'Networking', link: '#'}, {name: 'Open Source', link: '#'}, {name: 'Privacy', link: '#'}, {name: 'Security', link: '#'}] 
+        title: 'Выгодно', 
+        text: 'Качественные строительные материалы бизнес –класса. Современные строительные технологии.', 
+        image: 'images/feature4.svg'
       },
-      {
-        title: 'How to get cheaper flights using a VPN', 
-        link:'#', 
-        image: 'article2',	
-        author: 'Jayson',
-        date: 'JUL 24, 2018',
-        categories: [{name: 'Guides', link: '#'}] 
-      },
-      {
-        title: 'Net Neutrality was repealed, but the fight is far from over', 
-        link:'#', 
-        image: 'article3',	
-        author: 'Chris Miller',
-        date: 'JUL 22, 2018',
-        categories: [{name: 'Governments', link: '#'}, {name: 'Net Neutrality', link: '#'}, {name: 'News', link: '#'}] 	
-      },	
-    ]	
-
-    announcements = [
-      {title: 'Upcoming Changes (Live Chat, Less Censorship, More Access)', link:'#'},
-      {title: 'New Servers (US Washington DC)', link:'#'},
-      {title: 'New Servers (US Denver)', link:'#'},
-      {title: 'Open Source: Releasing the PIA iOS Client', link:'#'},
-      {title: 'Opera Extension is now available', link:'#'}
     ]
-    popular = [
-      {title: 'The Gift of Privacy', link:'#'},
-      {title: 'UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture', link:'#'},
-      {title: 'About the PIA Client Security and VPN Security in General', link:'#'},
-      {title: 'A Private Net Is Just As Fundamental A Right As Freedom Of Speech', link:'#'},
-      {title: 'Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie', link:'#'}
-    ]
-    tagCloud = [
-      {title: 'medium tag', link:'#', size: 'medium'},
-      {title: 'xsmall tag', link:'#', size: 'xsmall'},
-      {title: 'normal tag', link:'#', size: 'normal'},	
-      {title: 'small tag', link:'#', size: 'small'},
-      {title: 'exta large tag', link:'#', size: 'xlarge'},
-      {title: 'medium tag', link:'#', size: 'medium'},
-      {title: 'medium tag', link:'#', size: 'medium'},	
-      {title: 'large tag', link:'#', size: 'large'},
-      {title: 'small tag', link:'#', size: 'small'},
-      {title: 'medium tag', link:'#', size: 'medium'},
-      {title: 'xsmall tag', link:'#', size: 'xsmall'},
-      {title: 'normal tag', link:'#', size: 'normal'},	
-      {title: 'small tag', link:'#', size: 'small'},
-      {title: 'exta large tag', link:'#', size: 'xlarge'},
-      {title: 'medium tag', link:'#', size: 'medium'},
-      {title: 'medium tag', link:'#', size: 'medium'},	
-      {title: 'large tag', link:'#', size: 'large'},
-      {title: 'small tag', link:'#', size: 'small'},	
-    ]	
+    houseList = [
+      {
+        id: 0,
+        title: 'Коттедж #28',
+        square: '164',
+        price: '',
+        gallery: ['house1', 'house2', 'house3'],
+        plan: ['house_plan1', 'house_plan2'],
+      },
+      {
+        id: 1,
+        title: 'Коттедж #39',
+        square: '164',
+        price: '',
+        gallery: ['house1', 'house2', 'house3'],
+        plan: ['house_plan1', 'house_plan2'],
+      },
+      {
+        id: 2,
+        title: 'Коттедж #19',
+        square: '164',
+        price: '',
+        gallery: ['house1', 'house2', 'house3'],
+        plan: ['house_plan1', 'house_plan2'],
+      },            
+    ],
+    houseFeatureList = [
+      {
+        title: 'Пруд в центре',
+        text: 'Наличие собственной береговой линии с пляжем, причалом для лодок и рестораном с летней террасой у воды. В 1,5 км от "Федоскино Парк" - "большая вода": Пяловское, Учинское, Икшинское, Пестовское, Клязьминское водохранилища.',
+        image: 'house_feature1'
+      },
+      {
+        title: 'Транспортная доступность',
+        text: 'Если Вы любите пробки мегаполиса, - Вам вряд ли понравится близость "Федоскино Парк" к Москве. Всего 15 км по Дмитровскому шоссе, и вы на месте. А после окончания реконструкции шоссе вы устанете оплачивать штрафы за превышение скорости, ведь ваш путь от МКАД будет занимать считанные минуты!',
+        image: 'house_feature2'
+      }     
+    ],
+    otherHouseList = [
+      {
+        title: 'Зеленоградский',
+        link: '#',
+        price: '3 млн',
+        location: 'Новая Рига, 19 км',
+        image: 'other_house1'
+      },
+      {
+        title: 'Рождествено',
+        link: '#',
+        price: '3 млн',
+        location: 'Новая Рига, 19 км',
+        image: 'other_house2'
+      },
+      {
+        title: 'Зеленоградский',
+        link: '#',
+        price: '3 млн',
+        location: 'Новая Рига, 19 км',
+        image: 'other_house1'
+      }, 
+      {
+        title: 'Рождествено',
+        link: '#',
+        price: '3 млн',
+        location: 'Новая Рига, 19 км',
+        image: 'other_house2'
+      },                
+    ],

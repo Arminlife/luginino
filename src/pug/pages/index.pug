@@ -1,77 +1,12 @@
 extends ../layout/_layout
 
 block content_block
-	.section_in
-		.section
-			.simple_header.blog__header 
-				.menu_trigger.menuTrigger
-					span.menu_trigger_decor
-				.simple_header__inner
-					.simple_header__item 
-						.list_title Tags: 
-						ul.simple_list
-							each item in blogTags
-								li.simple_list__item
-									a.simple_list__link(href= item.link)= item.title
-					.simple_header__item 
-						ul.simple_list
-							li.simple_list__item
-								a.list_title.list_title--link(href='#') Team 
-							li.simple_list__item
-								a.list_title.list_title--link(href='#') Contact					
-		.section
-			.blog__wrapper(data-blog)
-				main.blog__content 
-					h1.page_title Recent posts
-					.article_list
-						each article in blogPosts 
-							+article_card(article)
-					.more_btn
-						.btn.btn--bordered older posts
-				aside.blog__sidebar
-					.sidebar_widget
-						form(action="#", method="post") 
-							.icon_input
-								.icon_input__icon
-									+icon('search', 'icon--size_mod')
-								.icon_input__field
-									+form_input({
-										type: 'text',
-										label: '',
-										placeholder: 'Search blog',
-										value: '',
-										id: 'input_1',
-									})
-					.sidebar_widget 
-						.sidebar_widget__title.widget_title 
-							.widget_title__icon 
-								+icon('light', 'icon--size_mod')
-							.widget_title__title Announcements
-						.sidebar_widget__list
-							ul.widget_list 
-								each item in announcements
-									li.widget_list__item 
-										a.widget_list__link(href=item.link)= item.title 
-					.sidebar_widget 
-						.sidebar_widget__title.widget_title 
-							.widget_title__icon 
-								+icon('rss', 'icon--size_mod')
-							.widget_title__title Popular posts
-						.sidebar_widget__list
-							ul.widget_list 
-								each item in popular
-									li.widget_list__item 
-										a.widget_list__link(href=item.link)= item.title 									
-					.sidebar_widget
-						.sidebar_widget__banner
-							a.banner_link(href="#")
-								img(src="images/sidebar-banner.jpg", alt="")
-
-					.sidebar_widget
-						.sidebar_widget__title.widget_title 
-							.widget_title__title Tag cloud			
-						.sidebar_widget__tagcloud
-							ul.tagcloud 
-								each tag in tagCloud 
-									li.tagcloud__item 
-										a(href=tag.link class='tagcloud__link tagcloud__link--' + tag.size)= tag.title
+	+header()
+	include ../blocks/main_hero
+	include ../blocks/features_grid
+	include ../blocks/main_plan
+	include ../blocks/house_list
+	include ../blocks/house_features
+	include ../blocks/main_info
+	include ../blocks/contact_us
+	include ../blocks/other_houses

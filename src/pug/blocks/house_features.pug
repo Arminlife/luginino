@@ -1,0 +1,19 @@
+section.section.house_features
+  .section_in
+    .house_features__head 
+      .section_title Особенности поселка
+      .house_features__description 
+        |КП «Кабаново» граничит с одноименной деревней и лесным массивом. Благодаря небольшому количеству участков — здесь их всего 41 — поселок уютный и камерный. Периметр обнесен ограждением, по территории проложены дороги, въезд будет оборудован шлагбаумом.
+        |Поблизости от поселка «Кабаново» находится множество инфраструктурных объектов. Недалеко расположены Вознесенская церковь и Николо-Берлюковский монастырь.
+    .house_features__list 
+      each item in houseFeatureList 
+        .house_feature
+          +picture({
+            img: item.image,
+            class: 'house_feature__bg',
+            img_class: 'house_feature__img',
+          })
+          .house_feature__content 
+            .house_feature__content_in
+              .house_feature__title= item.title 
+              .house_feature__text= item.text

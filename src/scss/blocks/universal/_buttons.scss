@@ -1,0 +1,18 @@
+.btn {
+  @extend %btn_size_1;
+}
+
+.btn--style_filled {
+  @extend %accent_btn;
+}
+.btn--style_bordered {
+  @extend %border_btn;
+}
+.btn--size_big {
+  @extend %btn_size_2;
+}
+
+.btn--size_medium{
+  @extend %btn_size_1;
+  min-width: 19.4rem
+}

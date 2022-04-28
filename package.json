@@ -57,9 +57,11 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "gsap": "^3.9.1",
+    "gsap": "^3.10.2",
     "ismobilejs": "^1.1.1",
     "jquery": "^2.2.4",
+    "swiper": "^8.1.0",
+    "tippy.js": "^6.3.7",
     "vanilla-lazyload": "github:verlok/vanilla-lazyload"
   },
   "resolutions": {

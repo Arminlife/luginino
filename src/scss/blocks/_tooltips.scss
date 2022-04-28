@@ -1,0 +1,73 @@
+.tooltip {
+  position: absolute;
+  display: block;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 100%;
+  background-color: $accent;
+  z-index: 3;
+  transition: background-color .3s ease;
+  cursor: pointer;
+
+  &::before,
+  &:after {
+    @extend %hor_vert_centr;
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    border-radius: 4rem;
+    transition: all .3s ease;
+  }
+
+  &:before {
+    width: 2rem;
+    height: 2px;
+  }
+
+  &:after {
+    width: 2px;
+    height: 2rem;
+  }
+
+  &[aria-describedby],
+  &[aria-expanded=true] {
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    background-color: #fff;
+
+    &::before,
+    &:after {
+      background-color: $accent;
+    }
+  }
+}
+
+.tooltip__picture{
+  display: block;
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto 1.4rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.tooltip__content{
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-align: center;
+}
+
+.tippy-box {
+  padding: 3rem;
+  max-width: 32rem;
+  background-color: #fff;
+  border-radius: 3.8rem;
+}
+.tippy-content{
+  @extend %global_flex_block_column_nowrap_flex-start_center;
+}

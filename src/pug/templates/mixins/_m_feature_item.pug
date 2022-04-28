@@ -1,0 +1,7 @@
+mixin feature_item(data)
+  .feature_item
+    .feature_item__icon 
+      img(src= data.image, alt="")
+    .feature_item__inner 
+      .feature_item__title= data.title 
+      .feature_item__text!= data.text

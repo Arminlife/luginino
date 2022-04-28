@@ -1,0 +1,82 @@
+.contact_us {
+  background: #162564;
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.contact_us__wrapper {
+  @extend %global_flex_block_row_nowrap_flex-start_center;
+}
+
+.contact_us__photo {
+  position: relative;
+  padding: 5.3rem 6.3rem 0;
+  width: 93.8rem;
+}
+
+.contact_us__photo_bg {
+  width: 100%
+}
+
+.contact_us__content {
+  max-width: 52.7rem;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.contact_us__title {
+  @extend %h1;
+  margin: 0 auto 4rem 0;
+  color: #fff;
+}
+
+.contact_us__description {
+  @extend %text;
+
+  margin: 0 auto 5.9rem 0;
+}
+
+.contact_us__btns .btn {
+  min-width: 19.3rem;
+  &:not(:last-child) {
+    margin: 0 1.5rem 0 0;
+  }
+}
+
+.contact_us__decor {
+  position: absolute;
+  bottom: 0;
+  left: 11.5rem;
+  width: 90vh;
+  height: 90vh;
+
+  background: #233379;
+  border-radius: 100%;
+  z-index: 0;
+}
+
+.contact_us__card {
+  position: absolute;
+  left: 14.1rem;
+  bottom: 14.6rem;
+}
+
+.contact_us__name {
+  display: table;
+  padding: 0 1rem;
+  font-size: 3.6rem;
+  line-height: 4.7rem;
+  background-color: $accent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.contact_us__position {
+  padding: 0 1rem;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  background-color: $accent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

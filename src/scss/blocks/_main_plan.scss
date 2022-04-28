@@ -1,0 +1,29 @@
+.main_plan{
+  height: 95vh;
+  margin-bottom: 9rem;
+  overflow: hidden;
+  .section_in{
+    padding: 6rem 8rem;
+  }
+}
+.main_plan__picture{
+  display: block;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: -40%;
+  bottom: 0;
+}
+.main_plan__img{
+  @extend %cover_img
+}
+.main_plan__title{
+  position: relative;
+  font-size: 14.4rem;
+  line-height: 16rem;
+  font-family: $font_heading;
+  color: #fff;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}

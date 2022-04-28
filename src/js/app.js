@@ -6,7 +6,11 @@ import pageWidgetInit from './dev_vendors/dev_widget';
 // ------------------- imports###
 
 // ------------------  import components
-import HeaderMenu from './components/header_menu';
+import Header from './components/header';
+import HeaderAnimation from './components/header_animation';
+import Animations from './components/animations';
+import Tooltips from './components/tooltips';
+import Sliders from './components/sliders';
 // ------------------  import components###
 
 window.jQuery = $;
@@ -33,7 +37,13 @@ const readyFunc = () => {
 const loadFunc = () => {
 	console.log('page load');
 	// init componets
-	let headerMenu = new HeaderMenu('.simple_header');
+	let header = new Header('.header');
+	let headerAnimation = new HeaderAnimation.ScrollFunc('.header');
+	let animations = new Animations('.base');
+	let tooltips = new Tooltips('.main_hero');
+	let houseSlider = new Sliders.HouseSlider('.house_item__gallery');
+	let planSlider = new Sliders.PlanSlider('.house_item__plan');
+	let otherHouseSlider = new Sliders.OtherHouseSlider('.other_house__gallery');
 };
 
 documentReady(() => {

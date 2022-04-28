@@ -1,0 +1,15 @@
+.section_title {
+  @extend %h1;
+  color: $black;
+  display: block;
+  position: relative;
+  margin: 0 0 6rem 0;
+}
+
+.section_title--mod_color_secondary {
+  color: #fff;
+}
+
+.section_title--mod_align_center {
+  text-align: center;
+}

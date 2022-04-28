@@ -1,0 +1,13 @@
+section.section.other_house
+  .section_in
+    .other_house__title
+      .section_title Другие поселки
+      .other_house__gallery.swiper-container 
+        .swiper-wrapper 
+          each item in otherHouseList
+            .swiper-slide 
+              +picture({
+                img: item.image,
+                class: 'other_house__picture',
+                img_class: 'other_house__img',
+              })

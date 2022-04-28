@@ -1,0 +1,38 @@
+section.main_hero 
+  .section_in 
+    .main_hero__title_wrapper
+      h1.main_hero__title ЛУГИНИНО #[br] ПАРК
+      .main_hero__arrow
+        +icon('arrow_down', 'icon--size_mod')
+    .main_hero__house 
+      .cloud_left
+        +picture({
+          img: 'cloud_left',
+          png: true,
+          class: 'cloud_left__picture',
+          img_class: 'cloud_left__img',
+        })
+      .cloud_right
+        +picture({
+          img: 'cloud_right',
+          png: true,
+          class: 'cloud_right__picture',
+          img_class: 'cloud_right__img',
+        })
+      +picture({
+        img: 'main_house',
+        png: true,
+        class: 'main_house__picture',
+        img_class: 'main_house__img',
+      })
+      include main_hero_tooltips
+    .main_hero__bottom
+      .main_hero__bottom_left 
+        .text_label.text_label--bg_blue Ипотека от 5%
+        .text_label.text_label--bg_green Ленинградское шоссе — #[span 1 км от г. Зеленоград]
+      .main_hero__bottom_right
+        .main_hero__price 
+          .main_hero__price_title стоимость
+          .main_hero__price_value от 3 млн рублей
+        a.btn.btn--style_filled(href="#") Выбрать коттедж
+    

@@ -13,25 +13,24 @@
 @import "header";
 @import "footer";
 @import "forms";
-@import "blocks/universal/list_title";
-@import "blocks/universal/category_link";
-@import "blocks/universal/icon_input";
-@import "blocks/universal/widget_title";
-@import "blocks/universal/widget_list";
-@import "blocks/universal/btn";
+@import "blocks/universal/buttons";
+@import "blocks/universal/text_label";
+@import "blocks/universal/section_title";
 @import "blocks/sections";
-@import "blocks/blog_layout";
-@import "blocks/simple_header";
-@import "blocks/menu_trigger";
-@import "blocks/simple_list";
-@import "blocks/article_list";
-@import "blocks/article_card";
-@import "blocks/comment_counter";
-@import "blocks/sidebar_widget";
-@import "blocks/tagcloud";
+@import "blocks/main_hero";
+@import "blocks/tooltips";
+@import "blocks/features_grid";
+@import "blocks/main_plan";
+@import "blocks/house_item";
+@import "blocks/house_features";
+@import "blocks/main_info";
+@import "blocks/contact_us";
+
 
 // base_ui
 @import "base_ui/all_icons";
 @import "base_ui/buttons";
 
 // plugins
+@import "../../node_modules/tippy.js/animations/scale.css";
+@import "../../node_modules/swiper/swiper-bundle";

@@ -1,0 +1,43 @@
+mixin house_item(data)
+  .house_item
+    .house_item__left
+      .house_item__gallery.swiper-container 
+        .swiper-wrapper 
+          each image in data.gallery 
+            .swiper-slide 
+              +picture({
+                img: image,
+                class: 'house_item__picture',
+                img_class: 'house_item__img',
+              })
+        .swiper-navigation
+          .swiper-button-prev #[+icon('slide_arrow', 'icon--size_mod')]
+          .swiper-button-next #[+icon('slide_arrow', 'icon--size_mod')]
+        .swiper-pagination
+      .house_item__description
+        .house_item__title_wrapper
+          .house_item__title= data.title
+          a.btn.btn--style_filled.btn--size_big(href="#") Оставить заявку
+        .house_item__specs 
+          dl.house_item__spec
+            dt.spec_title общая площадь
+            dd.spec_value!= data.square + ' м<sup>2</sup>'
+          dl.house_item__spec
+            dt.spec_title стоимость
+            if data.price
+              dd.spec_value= data.price 
+            else 
+              dd.spec_value по запросу              
+    .house_item__right
+      .house_item__plan.swiper-container 
+        .swiper-wrapper 
+          each image in data.plan 
+            .swiper-slide 
+              +picture({
+                img: image,
+                class: 'house_item__plan_picture',
+                img_class: 'house_item__plan_img',
+              })
+        .house_item__plan_pagination
+          span.pagination_title Этаж:
+          .swiper-pagination

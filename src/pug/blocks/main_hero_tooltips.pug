@@ -1,0 +1,13 @@
+.main_hero__tooltips 
+  each item, index in tooltips 
+    .tooltip(data-template= index style='bottom: ' + item.bottom + '%; left: '+item.left+'%')
+
+.main_hero__tooltips_data 
+  each item in tooltips 
+    div(id= 'tooltip' + item.id)
+      +picture({
+        img: item.image,
+        class: 'tooltip__picture',
+        img_class: 'tooltip__img',
+      })
+      .tooltip__content= item.content

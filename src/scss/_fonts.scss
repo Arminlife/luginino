@@ -1,4 +1,2 @@
-@include font_face('RobotoCondensed-Regular', 'RobotoCondensed', $font_path, 400);
-@include font_face('Roboto-Medium', 'Roboto', $font_path, 500);
-@include font_face('Roboto-Regular', 'Roboto', $font_path, 400);
-@include font_face('Roboto-Light', 'Roboto', $font_path, 300);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@include font_face('BebasNeuePro-Bold', 'Bebas Neue Pro', $font_path, 700);

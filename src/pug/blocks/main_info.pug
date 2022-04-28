@@ -1,0 +1,36 @@
+-
+	mainInfoList = [
+		{
+			title: 'Срок сдачи',
+			text: 'Сдан',
+		},
+		{
+			title: 'Класс поселка',
+			text: 'Эконом',
+		},
+		{
+			title: 'Размер поселка',
+			text: '4 Га',
+		},
+		{
+			title: 'Кол-во объектов',
+			text: '44',
+		},
+		{
+			title: 'Земли',
+			text: 'Под дачное строительство',
+		},              
+		{
+			title: 'Стоимость обслуживания',
+			text: '1000 руб./мес.',
+		},      
+	],
+	
+section.section.main_info
+	.section_in
+		.main_info__title Общая информация
+		ul.main_info__list
+			each item in mainInfoList
+				li.main_info__item
+					span.info_item__title= item.title
+					span.info_item__value= item.text

@@ -1,2 +1,18 @@
 mixin footer
 	footer.footer
+		.section_in 
+			.footer_row 
+				.footer_column
+					a(href="#").footer_logo
+						img.footer_logo__img(src="images/logo.svg", alt="")
+				.footer_column.footer_column--menu_mod
+					each item in footerMenu
+						ul.footer_list
+							each listItem in item.list 
+								li.footer_list__item 
+									a.footer_list__link(href=listItem.link)= listItem.title
+			.footer_row 
+				.footer_copyright
+					.footer_copyright__item ©Insli Недвижимость
+					a.footer_copyright__item(href="#") Политика обработки персональных данных 
+					a.footer_copyright__item(href="#") Разработка сайта — OpenColour

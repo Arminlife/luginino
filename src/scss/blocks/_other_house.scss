@@ -1,0 +1,112 @@
+.other_house {
+  padding: 11.4rem var(--gl-indent);
+}
+
+.other_house__gallery {
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.h_item {
+  display: block;
+  position: relative;
+}
+
+.h_item__picture {
+  display: block;
+  margin: 0 0 3.4rem 0;
+  width: 100%;
+  height: 38rem;
+}
+
+.h_item__img {
+  @extend %cover_img;
+}
+
+.h_item__title {
+  @extend %h2;
+
+  color: $black;
+}
+
+.h_item__label_wrapper {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+.h_item__label {
+  display: table;
+  padding: 0.9rem 1.3rem 0.8rem 1.2rem;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  border-radius: 6.7rem;
+
+  &:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.h_item__label--price_mod {
+  background-color: $accent;
+}
+
+.h_item__label--location_mod {
+  background-color: #58A85C;
+}
+
+.other_house__navigation {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: -10rem;
+    width: 5.5rem;
+    height: 2.1rem;
+    color: #000;
+  }
+
+}
+
+.other_house__navigation .swiper-button-prev {
+  right: 8rem;
+  left: auto;
+}
+
+.other_house__navigation .swiper-pagination {
+  bottom: 0;
+}
+
+.other_house__navigation .swiper-pagination-bullet {
+  width: 1.9rem;
+  height: 1.9rem;
+  margin: 0 0.5rem;
+  position: relative;
+  opacity: 1;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  
+  transition: border-color .3s ease;
+
+  &:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: $accent;
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+}
+
+.other_house__navigation .swiper-pagination-bullet-active {
+  border: 2px solid $accent;
+  &:before {
+    opacity: 1;
+  }
+}

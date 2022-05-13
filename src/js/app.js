@@ -43,7 +43,7 @@ const loadFunc = () => {
 	let tooltips = new Tooltips('.main_hero');
 	let houseSlider = new Sliders.HouseSlider('.house_item__gallery');
 	let planSlider = new Sliders.PlanSlider('.house_item__plan');
-	let otherHouseSlider = new Sliders.OtherHouseSlider('.other_house__gallery');
+	let otherHouseSlider = new Sliders.OtherHouseSlider('.other_house__gallery .swiper-container');
 };
 
 documentReady(() => {

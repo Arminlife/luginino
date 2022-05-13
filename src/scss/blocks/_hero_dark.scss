@@ -1,0 +1,25 @@
+.hero_dark {
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+
+  background-color: #333;
+}
+
+.hero_dark__title {
+  @extend %h1;
+
+  margin: 0 auto 9rem auto;
+
+  text-align: center;
+  color: #fff;
+}
+
+.hero_dark__btns {
+  @extend %global_flex_block_row_wrap_center_center; 
+  margin: 0 auto;
+}
+
+.hero_dark__btns .btn{
+  margin: 0 0.75rem;
+  min-width: 19.4rem;
+}

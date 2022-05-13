@@ -2,12 +2,24 @@ section.section.other_house
   .section_in
     .other_house__title
       .section_title Другие поселки
-      .other_house__gallery.swiper-container 
-        .swiper-wrapper 
-          each item in otherHouseList
-            .swiper-slide 
-              +picture({
-                img: item.image,
-                class: 'other_house__picture',
-                img_class: 'other_house__img',
-              })
+      .other_house__gallery
+        .swiper-container 
+          .swiper-wrapper 
+            each item in otherHouseList
+              .swiper-slide 
+                a.h_item(href= item.link) 
+                  +picture({
+                    img: item.image,
+                    class: 'h_item__picture',
+                    img_class: 'h_item__img',
+                  })
+                  h3.h_item__title= item.title
+                  .h_item__label_wrapper
+                    .h_item__label.h_item__label--location_mod= item.location
+                    .h_item__label.h_item__label--price_mod=  `от ${item.price} Руб `
+          .other_house__navigation
+            .swiper-button-prev 
+              +icon('ar_right', 'icon--size_mod')
+            .swiper-button-next
+              +icon('ar_right', 'icon--size_mod')
+            .swiper-pagination            

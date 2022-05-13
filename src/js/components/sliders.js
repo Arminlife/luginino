@@ -37,7 +37,7 @@ export default class Sliders {
 		const otherHouseSwiper = new Swiper(target, {
 			modules: [Navigation, Pagination],
 			slidesPerView: 3,
-			spaceBetween: 0,
+			spaceBetween: 75,
 			loop: false,
 			pagination: {
 				el: '.swiper-pagination',
